@@ -9,8 +9,12 @@
 
    public function __construct() {
      $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
-     if (!$this->conn) $this->conn->connect_error();
-     else echo "Success";
+     if ($this->conn){
+      echo "string";
+     }
+     else{
+      $this->conn->connect_error();
+     }
    }
    //escape string
    public function escapeString($value)
