@@ -6,7 +6,7 @@ require_once 'db/initial.php';
         
     ];
 
-    $add = $invent->add($values);
+    $add = $addAnggota->add($values);
     
     if ($add) header('Location: ./index.php');
 

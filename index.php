@@ -7,7 +7,7 @@
 <body>
 <h3>Tambah tb_anggota</h3>
 <hr>
-<form action="controller/proses.php" method="post">
+<form action="proses/execute.php" method="post">
 	<label for="">Nama</label><br>
 	<input type="text" name="nama"><br>
 	<label for="">Alamat</label><br>
