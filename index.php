@@ -5,6 +5,6 @@
 	<title></title>
 </head>
 <body>
-
+<?php $db ?>
 </body>
 </html>
