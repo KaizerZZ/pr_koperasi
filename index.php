@@ -1,19 +1,21 @@
-<?php require_once 'db/initial.php'; ?>
+<?php require_once 'initial.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
+<!-- masih dicoba -->
+
 <h3>Tambah tb_anggota</h3>
 <hr>
-<form action="proses/execute.php" method="post">
+<form action="execute.php" method="post">
 	<label for="">Nama</label><br>
 	<input type="text" name="nama"><br>
 	<label for="">Alamat</label><br>
 	<input type="text" name="alamat"><br>
 	<label for="">Tanggal Lahir</label><br>
-	<input type="datetime" name="tgl_lahir"><br>
+	<input type="date" name="tgl_lahir"><br>
 	<label for="">Tempat Lahir</label><br>
 	<input type="text" name="tmpt_lahir"><br>
 	<label for="">No. Telp</label><br>
