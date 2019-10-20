@@ -1,7 +1,7 @@
 <?php 
 	require_once 'app/controller/Anggota.php'; 
 	$get = new Anggota;
-	$get->fetchAll();
+	$row = $get->fetchAll();
 	
 	if (isset($_POST['add_anggota'])) {
 		$tambahAnggota = new Anggota;
@@ -14,7 +14,9 @@
         );
 		$tambahAnggota->add('tb_anggota',$dataPost);
 	}
-
+	foreach ($row as $data) {
+		echo $data['nama_anggota']."<br>";
+	}
 
 
 ?>

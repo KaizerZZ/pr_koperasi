@@ -18,15 +18,8 @@
         public function fetchAll(){
             $models = new models;
             $data = $models->selectAll('tb_anggota');
-            while ($row = $data->fetch()){
-                ?>
-                    <table>
-                        <tr>
-                            <td><?= $row['nama_anggota'] ?></td>
-                        </tr>
-                    </table>
-                <?php
-	        }
+            $data->fetch();
+            return $data;
         }
         public function edit($table,$values){
             $edit = $this->pdo->prepare("UPDATE $table SET
