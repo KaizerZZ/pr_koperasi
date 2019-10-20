@@ -13,7 +13,7 @@
                 ':tmpt_lahir' => $values[3],
                 ':no_telp' => $values[4]
             );
-            $add->execute($dataAnggota);
+            return $add->execute($dataAnggota);
         }
         public function fetchAll(){
             $models = new models;
@@ -32,7 +32,7 @@
                 ':tmpt_lahir' => $values[3],
                 ':no_telp' => $values[4]
             );
-            $edit->execute($dataAnggota);
+            return $edit->execute($dataAnggota);
         }
         
     }

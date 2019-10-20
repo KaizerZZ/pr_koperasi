@@ -9,9 +9,13 @@
             $select->execute();
             return $select;
         }
-        
-        public function deleteById($table,$id){
-            $delete = $this->pdo->prepare("DELETE FROM $table WHERE id = $id");
+        public function selectById($table,$idDB,$idGet){
+            $select = $this->pdo->prepare("SELECT * FROM $table WHERE $idDB = $idGet");
+            $select->execute();
+            return $select;
+        }
+        public function deleteById($table,$idDB,$idGet){
+            $delete = $this->pdo->prepare("DELETE FROM $table WHERE $idDB = $idGet");
             $delete->execute();
         }
     }
