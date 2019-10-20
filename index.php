@@ -1,19 +1,21 @@
 <?php 
-	require_once 'app/models/models.php';
-	require_once 'app/controller/addAnggota.php'; 
-	$get = new models;
-	$dataAnggota = array(
-		'id_anggota',
-		'nama_anggota',
-		'alamat',
-		'tgl_lahir',
-		'tmpt_lahir',
-		'no_telp'
-	);
-	$get->selectAll('tb_anggota',$dataAnggota);
+	require_once 'app/controller/Anggota.php'; 
+	$get = new Anggota;
+	$get->fetchAll();
+	
 	if (isset($_POST['add_anggota'])) {
-		$tambahAnggota = new addAnggota;
+		$tambahAnggota = new Anggota;
+		$dataPost = array(
+			$_POST['nama'],
+			$_POST['alamat'],
+			$_POST['tgl_lahir'],
+			$_POST['tmpt_lahir'],
+			$_POST['no_telp']
+        );
+		$tambahAnggota->add('tb_anggota',$dataPost);
 	}
+
+
 
 ?>
 <!DOCTYPE html>
