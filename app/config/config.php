@@ -1,10 +1,9 @@
 <?php
-try {
-    $conn = new PDO("mysql:localhost","db_koperasi","root","");
-} catch (\Throwable $conn) {
-    throw $conn;
+class connect{
+  public $pdo;
+  public function __construct() {
+      $this->pdo = new PDO('mysql:host=localhost; dbname=db_koperasi','root','');
+  }
 }
-    
-
 
 ?>

@@ -1,4 +1,21 @@
-<?php require_once 'initial.php'; ?>
+<?php 
+	require_once 'app/models/models.php';
+	require_once 'app/controller/addAnggota.php'; 
+	$get = new models;
+	$dataAnggota = array(
+		'id_anggota',
+		'nama_anggota',
+		'alamat',
+		'tgl_lahir',
+		'tmpt_lahir',
+		'no_telp'
+	);
+	$get->selectAll('tb_anggota',$dataAnggota);
+	if (isset($_POST['add_anggota'])) {
+		$tambahAnggota = new addAnggota;
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +26,7 @@
 
 <h3>Tambah tb_anggota</h3>
 <hr>
-<form action="execute.php" method="post">
+<form action="" method="post">
 	<label for="">Nama</label><br>
 	<input type="text" name="nama"><br>
 	<label for="">Alamat</label><br>
