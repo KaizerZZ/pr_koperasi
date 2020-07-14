@@ -1,1 +1,1 @@
-INI TUGAS !!!
+Abadoned
